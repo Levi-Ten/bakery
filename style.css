@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 16px;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+@media (max-width: 768px) {
+    html{
+        font-size: 14px;
+    }
+}
+@media (max-width: 576px) {
+    html{
+        font-size: 12px;
+    }
+}
+
+
+/* *************************************** */
+.welcome {
+    width: 100%;
+    height: 130vh;
+    position: relative;
+    /* border: 1px solid red; */
+}
+.navigation{
+    position: absolute;
+   
+    /* border: 1px solid red; */
+    width: 100%;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px; */
+}
+.navigation__all{
+    padding: 10px 10px;
+    /* border: 1px solid red; */
+    display: flex;
+    width: 56%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.navigation__links{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.navigation a{
+    font-family: "Great Vibes", serif;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #c5ab6b; 
+}
+.welcome img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.welcome__content {
+    height: 90%;
+}
+
+/* .welcome::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(68, 56, 42);
+} */
+.logo {
+    /* width: 380px; */
+    width: 63.75rem;
+    height: 750px;
+    object-fit: cover;
+    /* border: 1px solid red; */
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+/* .welcome_text {
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.welcome_text h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #c5ab6b;
+}
+
+.welcome_text h1 {
+    font-size: 4.5rem;
+    font-weight: 600;
+    color: #fff;
+    width: 100%;
+    font-style: italic;
+} */
+
+/* .welcome_text h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #c5ab6b;
+    font-style: italic;
+}
+*/
+.welcome_bg_blur {
+    font-family: "Poppins", serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -20%);
+    background: rgb(rgb(154, 135, 116));
+    /* backdrop-filter: blur(10px); */
+    border-radius: 30px;
+    padding-bottom: 20px;
+}
+
+/* @media (max-width: 1200px) {
+    .welcome_bg_blur {
+        width: 80%;
+    }
+}
+
+@media (max-width: 576px) {
+    .welcome_bg_blur {
+        width: 90%;
+    }
+} */
+
+/* section first */
+section {
+    max-width: 1000px;
+    margin: 5% auto;
+}
+
+.section_title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.section_title h2 {
+    font-family: "Great Vibes", serif;
+    font-size: 60px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #c5ab6b;
+    text-align: center;
+}
+
+.section_title span {
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 32px;
+    text-align: center;
+}
+
+.section_title img {
+    width: 300px;
+    height: 21px;
+}
+
+.section__text {
+    /* width: calc(100% - 300px); */
+}
+
+.section__text p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: justify;
+}
+
+.section__gallery {
+    display: flex;
+    /* gap: 10px; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* border: 1px solid; */
+    width: 100%;
+}
+
+.section__gallery img {
+    /* width: 300px; */
+    width: 32%;
+    height: 200px;
+    transition: all 0.3s ease-in-out;
+}
+
+.section__gallery img:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.gallery {
+    /* border: 1px solid; */
+    /* max-width: 800px; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+/* contact */
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    /* border: 1px solid; */
+    width: fit-content;
+    padding: 2% 4%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    /* background-color: rgb(52, 39, 27); */
+    background-color: rgb(51, 41, 29);
+    color: rgb(185, 169, 125);
+    box-shadow: 0 0 10px rgb(52, 41, 29);
+}
+
+.contact a,
+.footer__contact a,
+.footer__address a,
+.footer__media a {
+    color: rgb(185, 169, 125);
+}
+
+.contact h2,
+.footer__contact h2,
+.footer__address h2,
+.footer__media h2 {
+    font-style: italic;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 2px;
+    color: rgb(185, 169, 125);
+    /* text-transform: uppercase; */
+    /* font-family: "Great Vibes", serif; */
+}
+
+.contact__data,
+.contact__schedule,
+.contact__address,
+.footer__contact,
+.footer__address {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    background-image: url('/images/siteImages/bg_color.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.footer {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.footer__logo img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.footer__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer__content {
+    color: rgb(185, 169, 125);
+}
+
+.footer__media a i {
+    font-size: 34px;
+}
