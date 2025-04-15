@@ -1,26 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
 }
-html{
+
+html {
     font-size: 16px;
 }
-body{
+
+body {
     font-family: 'Poppins', sans-serif;
 }
-a{
+
+a {
     text-decoration: none;
 }
+
 @media (max-width: 768px) {
-    html{
+    html {
         font-size: 14px;
     }
 }
+
 @media (max-width: 576px) {
-    html{
+    html {
         font-size: 12px;
     }
 }
@@ -33,9 +39,20 @@ a{
     position: relative;
     /* border: 1px solid red; */
 }
-.navigation{
+@media (max-width: 992px) {
+    .welcome {
+        height: 80vh;
+    }
+}
+
+/* @media (max-width: 480px) {
+    .welcome {
+        height: 50%;
+    }
+} */
+.navigation {
     position: absolute;
-   
+
     /* border: 1px solid red; */
     width: 100%;
     /* display: flex;
@@ -43,27 +60,33 @@ a{
     justify-content: center;
     gap: 20px; */
 }
-.navigation__all{
+
+.navigation__all {
     padding: 10px 10px;
     /* border: 1px solid red; */
     display: flex;
-    width: 56%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.navigation__links{
+
+.navigation__links {
     display: flex;
     flex-direction: row;
     gap: 20px;
+    justify-content: center;
+    width: 100%;
 }
-.navigation a{
+
+.navigation a {
     font-family: "Great Vibes", serif;
     font-size: 30px;
     font-weight: 600;
     letter-spacing: 3px;
-    color: #c5ab6b; 
+    color: #c5ab6b;
 }
+
 .welcome img {
     width: 100%;
     height: 100%;
@@ -72,7 +95,10 @@ a{
 
 .welcome__content {
     height: 90%;
+    /* height: clamp(50%, 90%, 90%); */
 }
+
+
 
 /* .welcome::after{
     content: "";
@@ -85,7 +111,8 @@ a{
 } */
 .logo {
     /* width: 380px; */
-    width: 63.75rem;
+    width: 100%;
+    /* width: 63.75rem; */
     height: 750px;
     object-fit: cover;
     /* border: 1px solid red; */
@@ -143,7 +170,23 @@ a{
     border-radius: 30px;
     padding-bottom: 20px;
 }
-
+@media screen and (max-width: 992px) {
+    .welcome_bg_blure {
+        top: 5%;
+        
+    }
+    .logo{
+        height:fit-content;
+    }
+}
+@media screen and (max-width: 576px) {
+    .welcome_bg_blur{
+        top: 10%;
+        transform: none; 
+        left: 0; 
+        width: 100%;
+    }
+}
 /* @media (max-width: 1200px) {
     .welcome_bg_blur {
         width: 80%;
@@ -201,7 +244,11 @@ section {
     line-height: 26px;
     text-align: justify;
 }
-
+@media screen and (max-width: 320px) {
+    .section__text p {
+        padding: 0px 5px;
+    }
+}
 .section__gallery {
     display: flex;
     /* gap: 10px; */
@@ -216,8 +263,18 @@ section {
     width: 32%;
     height: 200px;
     transition: all 0.3s ease-in-out;
+    object-fit: cover;
 }
-
+@media screen and (max-width: 992px) {
+    .section__gallery{
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
+    .section__gallery img{
+        width: 100%;
+    }
+}
 .section__gallery img:hover {
     transform: scale(1.1);
     transition: all 0.3s ease-in-out;
@@ -240,19 +297,27 @@ section {
 }
 
 /* contact */
-
+.contact__container{
+    /* border: 1px solid red; */
+    position: absolute;
+    left: 0;
+    /* transform: translateX(-50%); */
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 .contact {
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 50px;
+    flex-wrap: wrap;
     /* border: 1px solid; */
     width: fit-content;
     padding: 2% 4%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
+    
     /* background-color: rgb(52, 39, 27); */
     background-color: rgb(51, 41, 29);
     color: rgb(185, 169, 125);
@@ -306,6 +371,7 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    /* flex-wrap: wrap;  */
     gap: 50px;
 }
 
@@ -320,6 +386,19 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+}
+
+@media screen and (max-width: 1021px) {
+    .footer {
+        flex-direction: column;
+        
+        /* gap: 50px; */
+    }
+    .footer__content{
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
 }
 
 .footer__content {
